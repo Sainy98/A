@@ -90,7 +90,7 @@ export default function Nav() {
                             <input type="text" placeholder="Add guests" />
                         </div>
                         <div className="search_logo_div">
-                            <img className="search_logo " src="/AIRPNB/search.svg" />
+                            <img className="search_logo " src="/AIRPNB/search.svg" alt='search' />
                         </div>
                     </div>
                 )}
