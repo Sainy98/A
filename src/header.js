@@ -26,7 +26,7 @@ export default function Nav() {
 
         <nav className={`nav ${isScrolled ? 'scrolled' : ' '}`}>
             <a href='/'>
-                <img src='/logo.png' className='logo' alt='logo' />
+                <img src='/AIRPNB/logo.png' className='logo' alt='logo' />
             </a>
 
             <ul className='list-item'>
@@ -38,12 +38,12 @@ export default function Nav() {
             <div className='left-container'>
                 <div className='side-container'>
                     <li><a href='/'>Airnbnb your home</a></li>
-                    <img src='/internet.svg' className='internet-logo' alt='Internet logo'></img>
+                    <img src='/AIRPNB//internet.svg' className='internet-logo' alt='Internet logo'></img>
                 </div>
 
                 <div className='profile-btn'>
                     <img src='https://www.svgrepo.com/show/491428/line-3.svg' className='bar' onClick={toggleSignUp} alt='Bar Icon'></img>
-                    <img src='/profile.svg' className='profile' alt='profile'></img>
+                    <img src='/AIRPNB//profile.svg' className='profile' alt='profile'></img>
                 </div>
             </div>
             {isSignUpVisible && (
