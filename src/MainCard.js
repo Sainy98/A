@@ -8,7 +8,7 @@ export default function MainCard(props) {
 
         <div className="card">
             <img src={img} alt="img1"></img>
-            <span className="heart"><img src="./heart.svg" alt="heart"></img></span>
+            <span className="heart"><img src="/AIRPNB/heart.svg" alt="heart"></img></span>
             <h3>{name}</h3>
             <span>{address}</span> <br></br>
             <span>{date}</span>
