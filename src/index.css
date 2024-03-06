@@ -657,7 +657,7 @@ input:checked+.slider:before {
     top: -10px;
     margin-left: -39px;
     background-color: #ffffff;
-    padding-top: 18%;
+    padding-top: 95px;
     box-shadow: 0px 2px 4px 2px #80808036;
     margin-top: 2%;
     padding-left: 12px;
@@ -675,8 +675,7 @@ input:checked+.slider:before {
     width: 80%;
     top: 0;
     z-index: 10000;
-    margin: 3% 5%;
-
+    margin: 14px 19px;
     border-radius: 50px;
     display: flex;
     align-items: center;
