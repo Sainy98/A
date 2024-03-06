@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/AIRPNB/static/css/main.2ebc10da.css",
-    "main.js": "/AIRPNB/static/js/main.eda98200.js",
+    "main.css": "/AIRPNB/static/css/main.18d3843f.css",
+    "main.js": "/AIRPNB/static/js/main.b0fde43d.js",
     "static/js/453.ad6eb26e.chunk.js": "/AIRPNB/static/js/453.ad6eb26e.chunk.js",
     "index.html": "/AIRPNB/index.html",
-    "main.2ebc10da.css.map": "/AIRPNB/static/css/main.2ebc10da.css.map",
-    "main.eda98200.js.map": "/AIRPNB/static/js/main.eda98200.js.map",
+    "main.18d3843f.css.map": "/AIRPNB/static/css/main.18d3843f.css.map",
+    "main.b0fde43d.js.map": "/AIRPNB/static/js/main.b0fde43d.js.map",
     "453.ad6eb26e.chunk.js.map": "/AIRPNB/static/js/453.ad6eb26e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2ebc10da.css",
-    "static/js/main.eda98200.js"
+    "static/css/main.18d3843f.css",
+    "static/js/main.b0fde43d.js"
   ]
 }
