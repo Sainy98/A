@@ -1,9 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useRef, useEffect } from "react";
 
 export default function Nav() {
     const [isSignUpVisible, setIsSignUpVisible] = useState(false);
-
     const [isScrolled, setIsScrolled] = useState(false);
+
+    // const [isToggled, setIsToggled] = useState(false);
+    // const [isHidden, setIsHidden] = useState(true);
+
+    // const scrollRef = useRef(null);
+    // const [scrollLeft, setScrollLeft] = useState(0);
+    // const [showLeftButton, setShowLeftButton] = useState(false);
+    // const [showRightButton, setShowRightButton] = useState(true);
+
+
 
     const toggleSignUp = () => {
         setIsSignUpVisible(!isSignUpVisible);
@@ -22,14 +31,17 @@ export default function Nav() {
 
     }, []);
 
+
+
+
     return (
 
         <nav className={`nav ${isScrolled ? 'scrolled' : ' '}`}>
             <a href='/'>
                 <img src='/AIRPNB/logo.png' className='logo' alt='logo' />
             </a>
-
-            <ul className='list-item'>
+            {/* { <div className={`bar_container ${isScrolled ? 'scrolled' : ''}`}> } */}
+            <ul className={`list-item ${isScrolled ? 'scrolled' : ''}`}>
                 <li><a href='/'>Stays</a></li>
                 <li><a href='/'>Experiences</a></li>
                 <li><a href='/'>Online Experiences</a></li>
@@ -41,7 +53,7 @@ export default function Nav() {
                     <img src='/AIRPNB//internet.svg' className='internet-logo' alt='Internet logo'></img>
                 </div>
 
-                <div className='profile-btn'>
+                <div className='profile-btn' onClick={toggleSignUp}>
                     <img src='https://www.svgrepo.com/show/491428/line-3.svg' className='bar' onClick={toggleSignUp} alt='Bar Icon'></img>
                     <img src='/AIRPNB//profile.svg' className='profile' alt='profile'></img>
                 </div>
@@ -96,6 +108,8 @@ export default function Nav() {
                 )}
 
             </div>
+
+
         </nav>
 
     )

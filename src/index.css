@@ -28,6 +28,9 @@ body {
   background-color: white;
   z-index: 1000;
   transition: padding 0.3s ease;
+  gap: 40%;
+  /* margin-right: 2%;
+  margin-left: 2%; */
 }
 
 /* on scrolling */
@@ -35,12 +38,27 @@ body {
   padding: 0%;
 }
 
-.list-item {
-  list-style: none;
-  display: flex;
-  margin: 0 2%;
+.mobile_search {
+  display: none;
 }
 
+.mobile_filter {
+  display: none;
+}
+
+.list-item {
+  list-style: none;
+  display: inline-flex;
+  /* margin: 0 2%; */
+  position: absolute;
+  transition: margin-bottom 0.3s;
+}
+
+.list-item.scrolled {
+  position: absolute;
+  /* top: -33px; */
+  margin-bottom: 109px;
+}
 
 .list-item>li {
   margin: 5px;
@@ -145,16 +163,18 @@ body {
   z-index: 1000;
   transition: margin-top 0.3s;
   background-color: #ffffff;
+
 }
 
 
 .bar_container.scrolled {
   margin-top: 0%;
-  margin-left: -4%;
+  /* margin-left: -4%; */
   padding: 0 28px 0px 0;
   width: fit-content;
   content: none;
   gap: 15px;
+
 }
 
 .bar_container1>input,
@@ -291,25 +311,30 @@ body {
   scrollbar-width: none;
 }
 
-.scrollButton {
+.scrollButton1,
+.scrollButton2 {
   border-radius: 100%;
   border: 1px solid gray;
   outline: none;
   background-color: white;
+  position: absolute;
 }
 
-.scrollButton:hover {
+.scrollButton1,
+.scrollButton2:hover {
   cursor: pointer;
 }
 
-.scrollButton:first-of-type {
-  left: 0;
+.scrollButton1 {
+  left: 7%;
+  position: absolute;
   font-size: larger;
   box-shadow: 6px 2px 20px 20px #ffffff;
 }
 
-.scrollButton:last-of-type {
-
+.scrollButton2 {
+  right: 37%;
+  position: absolute;
   font-size: larger;
   box-shadow: 6px 2px 20px 20px #ffffff;
 }
@@ -317,9 +342,18 @@ body {
 .main_container {
   display: flex;
   align-items: center;
-  margin-left: 8%;
-  margin-right: 7%;
-  margin-top: 12%;
+  margin-top: 11%;
+  padding: 0 8%;
+  background-color: #ffffff;
+  z-index: 1000;
+  transition: margin-top 0.2s;
+}
+
+
+.main_container.scrolled {
+  position: fixed;
+  /* top: -95px; */
+  margin-top: 5%;
 }
 
 .main_tile {
@@ -586,4 +620,131 @@ input:checked+.slider:before {
   transform: translateX(11px);
   background-image: url(https://www.svgrepo.com/show/520990/tick.svg);
   background-size: cover;
+}
+
+@media only screen and (max-width: 600px) {
+  .bar_container {
+    display: none;
+  }
+
+  .main_container {
+    background-color: antiquewhite;
+  }
+
+  .bar_container1,
+  .bar_container2,
+  .bar_container3,
+  .bar_container4 {
+    padding: 0;
+    margin: 0;
+
+  }
+
+  .logo,
+  .list-item,
+  .left-container,
+  .profile-btn {
+    display: none;
+  }
+
+
+  .SelectionBar {
+    width: 100%;
+    gap: 19px;
+    position: fixed;
+    overflow-x: auto;
+    z-index: 1000;
+    top: -10px;
+    margin-left: -39px;
+    background-color: #ffffff;
+    padding-top: 18%;
+    box-shadow: 0px 2px 4px 2px #80808036;
+    margin-top: 2%;
+    padding-left: 12px;
+  }
+
+  /* .SelectionBar.scrolled {
+    width: auto;
+    gap: 19px;
+    overflow-x: auto;
+    margin-top: non;
+  } */
+
+  .mobile_search {
+    position: fixed;
+    width: 80%;
+    top: 0;
+    z-index: 10000;
+    margin: 3% 5%;
+
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+
+    box-shadow: 0px 2px 4px 2px #05050536;
+  }
+
+  .mobile_filter {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    z-index: 10000;
+    right: 15px;
+    top: 20px;
+    border: 1px solid #05050575;
+    border-radius: 50px;
+    padding: 10px;
+    display: block;
+  }
+
+  .mobile_filter>img {
+    width: inherit;
+    height: inherit;
+  }
+
+  .mobile_search>div {
+    padding: 7px 30px 7px 26px;
+  }
+
+  .black {
+    font-weight: 700;
+  }
+
+  .black~span {
+    font-size: small;
+  }
+
+  .mobile_search .search_logo {
+    width: 30px;
+    height: 30px;
+    padding: 3px 0px 3px 26px;
+  }
+
+  .search_logo>img {
+    width: inherit;
+    height: inherit;
+  }
+
+  .SelectionBar>div>img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .scrollButton2 {
+    display: none;
+  }
+
+  .scrollButton1 {
+    display: none;
+  }
+
+  .two_btn {
+    display: none;
+  }
+
+  .card {
+    width: 100%;
+    height: 500px;
+    margin: 100px auto 0 auto;
+  }
 }
